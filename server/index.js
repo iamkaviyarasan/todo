@@ -15,7 +15,7 @@ app.post('/add',(req,res)   =>{
     .then(result=>res.json(result))
     .catch(err=>res.json(err))
 
-})git 
+})
 app.listen(3001, () =>{
     console.log("Server is Running")
 })
