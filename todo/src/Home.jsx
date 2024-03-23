@@ -1,10 +1,10 @@
 import  React, {useState} from 'react'
-import Create from './Create'
+import Create from './create'
 
 function Home() { 
     const [todos,settodos]=useState([])
     return (
-       <div>
+       <div className='home'>
         <h2>todo list</h2>
         <Create/>
         {
