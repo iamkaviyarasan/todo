@@ -1,8 +1,16 @@
-import  React, {useState} from 'react'
-import Create from './create'
+import  React, {useEffect, useState} from 'react'
+import Create from './Create' 
+import axios from 'axios'
+
 
 function Home() { 
     const [todos,settodos]=useState([])
+    useEffect(() =>{
+        axios.get('http:/localhost:3001/get')
+        .then(result => settodos(result.data))
+        .catch(err => console.log(err))
+    },[])
+
     return (
        <div className='home'>
         <h2>todo list</h2>
@@ -14,7 +22,7 @@ function Home() {
             :
             todos.map(todo =>(
                 <div>
-                   {todo}
+                   {todo.task}
                 </div>
 
             ))
