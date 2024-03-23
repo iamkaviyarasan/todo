@@ -6,7 +6,7 @@ import axios from 'axios'
 function Home() { 
     const [todos,settodos]=useState([])
     useEffect(() =>{
-        axios.get('http:/localhost:3001/get')
+        axios.get('http://localhost:3001/get')
         .then(result => settodos(result.data))
         .catch(err => console.log(err))
     },[])
