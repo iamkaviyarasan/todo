@@ -8,21 +8,21 @@ function Home() {
     const [todos,settodos]=useState([])
 
     useEffect(() =>{
-        axios.get('http://localhost:3001/get')
+        axios.get('https://todo-1-yut9.onrender.com/get')
         .then(result => settodos(result.data))
         .catch(err => console.log(err))
     },[])
 
 
     const handleEdit = (id) =>{
-        axios.put('http://localhost:3001/update/'+id)
+        axios.put('https://todo-1-yut9.onrender.com/update/'+id)
         .then(result => {
             location.reload()
         })
         .catch(err => console.log(err))
     }
     const handleDelete =(id) =>{
-        axios.delete('http://localhost:3001/delete/'+id)
+        axios.delete('https://todo-1-yut9.onrender.com/delete/'+id)
         .then(result => {
             location.reload()
         })
