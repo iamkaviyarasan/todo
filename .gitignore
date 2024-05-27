@@ -1,1 +1,7 @@
+server/.env
 server/node_modules
+server/node_modules/.bin/nopt.ps1
+server/node_modules/.bin/semver
+server/node_modules/.package-lock.json
+server/node_modules/@mongodb-js/saslprep/dist/browser.js.map
+server/node_modules/balanced-match/package.json

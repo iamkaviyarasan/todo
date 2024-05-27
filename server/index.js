@@ -3,13 +3,14 @@ const mongoose =require('mongoose')
 const cors =require('cors')
 const TodoModel =require('./models/todo')
 
-
+require('dotenv').config()
 const app = express()
 app.use(cors())
 app.use (express.json())
+const db_url=process.env.todo_db_url
+console.log("db_url",db_url)
 
-mongoose.connect('mongodb://127.0.0.1:27017/test')
-
+mongoose.connect(db_url)
 app.get('/get',(req,res) =>{
     TodoModel.find()
     .then(result =>res.json(result))
